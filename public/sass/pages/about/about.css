@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Megrim&display=swap");
+.headline {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+.headline h1 {
+  font-size: 100px;
+  font-weight: 100;
+  font-family: Megrim, sans-serif;
+  color: #f4e5bb;
+  margin: 0 auto;
+  padding: 250px 0px;
+  width: 80%;
+  text-align: center;
+  background: none;
+}
+
+main {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin: 25px 0px 50px;
+}
+
+main .container {
+  margin: 10px auto;
+  padding: 0.5px;
+  width: 80%;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 0px 6px #dcdcdc;
+          box-shadow: 0px 0px 6px #dcdcdc;
+}
+
+main .container section {
+  margin: 50px auto;
+  width: 90%;
+}
+
+main .container section h2 {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+main .container section p {
+  font-size: 18px;
+  text-align-last: left;
+  line-height: 1.5;
+}
+
+main .container .row-1 {
+  text-align: left;
+}
+
+main .container .row-2 {
+  position: relative;
+}
+
+main .container .row-2 ul li {
+  position: relative;
+  padding-left: 50px;
+  margin-bottom: 40px;
+  width: 100%;
+}
+
+main .container .row-2 ul li .date {
+  margin-bottom: 10px;
+  color: #f4e5bb;
+}
+
+main .container .row-2 ul li .date h3 {
+  font-size: 18px;
+  font-weight: 100;
+}
+
+main .container .row-2 ul li .content {
+  margin-bottom: 25px;
+}
+
+main .container .row-2 ul li .content h2 {
+  font-size: 24px;
+}
+
+main .container .row-2 ul li .content p {
+  text-align: left;
+}
+
+main .container .row-2 ul li .gallery {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(250px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 20px;
+}
+
+main .container .row-2 ul li .gallery img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+}
+
+main .container .row-2 ul li::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50px;
+  background: #f4e5bb;
+}
+
+main .container .row-2 ul li:last-child {
+  margin-bottom: 0px;
+}
+
+main .container .timeline::before {
+  content: '';
+  position: absolute;
+  left: 1%;
+  width: 2px;
+  height: 100%;
+  background: #dcdcdc;
+}
+/*# sourceMappingURL=about.css.map */

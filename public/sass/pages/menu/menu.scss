@@ -1,0 +1,139 @@
+main {
+    margin: 50px auto;
+    width: 80%;
+    display: grid;
+    grid-template-columns: 20% 1fr;
+    grid-gap: 50px;
+
+    .aside-type {
+
+        aside {
+            border: 1px solid #dcdcdc;
+            padding: 15px 20px;
+            margin-bottom: 30px;
+
+            h2 {
+                margin-bottom: 20px;
+                font-size: 28px;
+            }
+    
+            form {
+    
+                .filter-drink {
+                    margin-left: 10px;
+                    margin-bottom: 10px;
+                    font-size: 18px;
+    
+                    input[type="checkbox"] {
+                        margin-right: 5px;
+                        position: relative;
+                    }
+
+                    input[type="checkbox"]:checked::after {
+                        content: '';
+                        position: absolute;
+                        top: 0px;
+                        left: 0px;
+                        height: 100%;
+                        width: 100%;
+                        background: #f4e0ac;
+                        z-index: 0;
+                        border-radius: 1.75px;
+                    }
+                }
+            }
+        }
+
+        .personal-brew {
+            margin: 0 auto;
+            width: 80%;
+            text-align: center;
+
+            p {
+                font-size: 16px;
+                line-height: 1.5;
+                transition: .4s;
+            }
+
+            p:hover {
+                color: #464646;
+            }
+        }
+    }
+
+    .grid-container {
+        margin-top: -35px;
+
+        .drink-list .drink-list-item {
+
+            .drink-list-item-title {
+                position: relative;
+                margin: 35px 0px 35px;
+                text-align: center;
+
+                h2 {
+                    font-size: 30px;
+                    display: inline-block;
+                    color: #424242;
+                    background: #fff;
+                    padding: 0px 40px;
+                }
+            }
+
+            .drink-list-item-title::before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 0;
+                width: 100%;
+                height: 2px;
+                background: radial-gradient(#d8d8d8, #fff);
+                z-index: -1;
+            }
+            
+            .drink-list-item-content {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(200px, 0.5fr));
+                grid-gap: 50px;
+
+                li {
+                    
+                    .item-image {
+                        width: 100%;
+
+                        img {
+                            width: 100%;
+                            transition: .3s;
+                        }
+
+                        img:hover {
+                            opacity: 0.8;
+                        }
+                    }
+
+                    .item-text {
+
+                        .item-text-np {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            margin: 20px 0px 5px;
+    
+                            h3 {
+                                color: #333333;
+                            }
+                        }
+    
+                        .item-text-desc {
+                            color: #838282;
+    
+                            p {
+                                line-height: 1.5;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

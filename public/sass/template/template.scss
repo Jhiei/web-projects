@@ -1,0 +1,130 @@
+header {
+    height: fit-content;
+    background: #fff;
+    position: sticky;
+    top: 0;
+    border-bottom: 1px solid #dcdcdc;
+    width: 100%;
+    z-index: 10;
+
+    .inner-container {
+        margin: 0 auto;
+        width: 80%;
+        padding: 25px 0px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .header-img a {
+            display: inline-block;
+        
+            img {
+                width: 45%;
+            }
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .nav-links li {
+                display: inline-block;
+                text-transform: uppercase;
+                padding: 0px 20px;
+                font-size: 16px;
+                letter-spacing: 1px;
+
+                a {
+                    transition: .3s;
+                }
+
+                a:hover {
+                    color: #f4e0ac;
+                }
+            }
+        }
+    }
+}
+
+footer {
+    background: #000;
+    height: fit-content;
+
+    .container {
+        padding: 75px 0px;
+        margin: 0 auto;
+        width: 80%;
+
+        .footer-row-1 {
+            width: 75%;
+
+            .page-link {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                color: #fff;
+                grid-gap: 20px;
+                flex-basis: 70%;
+    
+                .page-link-col {
+                    width: 100%;
+                    margin-right: 25px;
+    
+                    .col-item-list {
+                        margin: 1em 0px 0px;
+
+                        .col-item  {
+                            margin-bottom: 10px;
+                            font-size: 14px;
+    
+                            a {
+                                display: inline-block;
+                                color: #d8d8d8;
+                                transition: .2s;
+                            }
+
+                            a:hover {
+                                color: #fff;
+                            }
+                        }
+
+                        .col-item:last-child {
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+            }
+        }
+
+        .footer-row-2 {
+            position: relative;
+            margin-top: 35px;
+            padding-top: 35px;
+            color: #fff;
+            
+            p:nth-child(2) {
+                margin: 15px 0px 5px;
+            }
+
+            .contract-item a {
+                font-size: 14px;
+                color: #d8d8d8;
+                transition: .2s;
+            }
+
+            .contract-item a:hover {
+                color: #fff;
+            }
+        }
+
+        .footer-row-2::before {
+            content: '';
+            width: 75%;
+            height: 3px;
+            background: #fff;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    }
+}
