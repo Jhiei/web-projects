@@ -49,9 +49,10 @@ header .inner-container nav {
 header .inner-container nav .nav-links li {
   display: inline-block;
   text-transform: uppercase;
-  padding: 0px 20px;
+  margin: 0px 15px;
   font-size: 16px;
   letter-spacing: 1px;
+  position: relative;
 }
 
 header .inner-container nav .nav-links li a {
@@ -61,6 +62,25 @@ header .inner-container nav .nav-links li a {
 
 header .inner-container nav .nav-links li a:hover {
   color: #f4e0ac;
+}
+
+header .inner-container nav .nav-links li a::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  height: 2px;
+  width: 0px;
+  background: #f4e0ac;
+  opacity: 0;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+header .inner-container nav .nav-links li a:hover::after {
+  width: 100%;
+  opacity: 0.75;
+  right: 2px;
 }
 
 footer {
