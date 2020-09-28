@@ -8,6 +8,15 @@ main {
   grid-gap: 50px;
 }
 
+main .aside-type {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 135px;
+}
+
 main .aside-type aside {
   border: 1px solid #dcdcdc;
   padding: 15px 20px;
@@ -28,6 +37,7 @@ main .aside-type aside form .filter-drink {
 main .aside-type aside form .filter-drink input[type="checkbox"] {
   margin-right: 5px;
   position: relative;
+  cursor: pointer;
 }
 
 main .aside-type aside form .filter-drink input[type="checkbox"]:checked::after {
@@ -91,9 +101,15 @@ main .grid-container .drink-list .drink-list-item .drink-list-item-title::before
 main .grid-container .drink-list .drink-list-item .drink-list-item-content {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(250px, 0.5fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(250px, 0.5fr));
-  grid-gap: 50px;
+  -ms-grid-columns: (minmax(250px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 20px;
+}
+
+main .grid-container .drink-list .drink-list-item .drink-list-item-content li {
+  padding: 15px;
+  -webkit-box-shadow: 0px 0px 5px #dcdcdc;
+          box-shadow: 0px 0px 5px #dcdcdc;
 }
 
 main .grid-container .drink-list .drink-list-item .drink-list-item-content li .item-image {
@@ -133,5 +149,31 @@ main .grid-container .drink-list .drink-list-item .drink-list-item-content li .i
 
 main .grid-container .drink-list .drink-list-item .drink-list-item-content li .item-text .item-text-desc p {
   line-height: 1.5;
+}
+
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(100px);
+            transform: translateX(100px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(100px);
+            transform: translateX(100px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
 }
 /*# sourceMappingURL=menu.css.map */

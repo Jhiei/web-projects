@@ -10,7 +10,7 @@
                 <form action="javascript: void(0)">
                     @foreach ($types as $type)
                     <div class="filter-drink">
-                        <input type="checkbox" name="{{ $type }}">
+                        <input type="checkbox" name="{{ $type }}" id="chkbox-{{ $type }}">
                         <label for="{{ $type }}">{{ $type }}</label>
                     </div>
                     @endforeach
@@ -24,7 +24,7 @@
         </section>
         <section class="grid-container">
             <ul class="drink-list">
-                <section class="drink-list-item">
+                <section class="drink-list-item" id="sp-section">
                     <div class="drink-list-item-title">
                         <h2>Special</h2>
                     </div>
@@ -47,7 +47,7 @@
                         @endforeach
                     </div>
                 </section>
-                <section class="drink-list-item">
+                <section class="drink-list-item" id="cl-section">
                     <div class="drink-list-item-title">
                         <h2>Classic</h2>
                     </div>
@@ -70,7 +70,7 @@
                         @endforeach
                     </div>
                 </section>
-                <section class="drink-list-item">
+                <section class="drink-list-item" id="co-section">
                     <div class="drink-list-item-title">
                         <h2>Cold</h2>
                     </div>
@@ -96,4 +96,6 @@
             </ul>
         </section>
     </main>
+
+    <script src="{{ asset('js/filter.js') }}"></script>
 @endsection
